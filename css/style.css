@@ -457,7 +457,11 @@ section.offers p {
 
 /* Meals */
 
-.menuPage .flex {}
+.menuPage .flex {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
 
 .menuPage .flex .columna {
     width: 100%;
@@ -465,7 +469,6 @@ section.offers p {
 
 .menuPage .flex article {
     border: none;
-    margin: 0 auto;
 }
 
 article.meal {
@@ -560,16 +563,15 @@ main .flex article.blogCard {
         border-left: 1px solid #aaa;
         margin-bottom: 1em;
     }
-    main .flex article:first-child {
-        border
-    }
     main .flex article:last-child {
         width: 100%;
     }
     main section .underline {
         margin-bottom: 2em;
     }
-    main
+    .menuPage .flex article {
+        width: 100%;
+    }
 }
 
 @media(min-width:1005px) {
@@ -590,6 +592,19 @@ main .flex article.blogCard {
     main section .flex .columna {
         width: 50%;
         padding: 2em;
+    }
+    .menuPage .flex {}
+    .menuPage .flex>.columna:first-child {
+        width: 30%;
+    }
+    .menuPage .flex>.columna:last-child {
+        width: 70%;
+    }
+    .menuPage .flex article {
+        width: 100%;
+    }
+    .menupage .flex .meal .cardImgCont {
+        float: left;
     }
 }
 
