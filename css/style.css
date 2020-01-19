@@ -297,7 +297,7 @@ main .flex article>* {
 main section article div>i {
     color: #da573a;
     font-size: 2em;
-    border: 3px dotted #da573a;
+    border: 2px solid #da573a;
     padding: 1rem;
     border-radius: .3rem;
 }
@@ -319,6 +319,7 @@ main section article p {
 main section article .enlace {
     text-decoration: none;
     color: #da573a;
+    font-weight: bold;
 }
 
 main section article .enlace i {
@@ -393,7 +394,7 @@ footer a, footer li {
 /*menu.html && blog.html*/
 
 h2.notIndex {
-    padding-top: 1em;
+    padding-top: 1.5em;
     font-family: 'Great Vibes', cursive;
     font-size: 2rem;
     text-align: center;
@@ -470,8 +471,10 @@ section.offers p {
 
 .menuPage .flex {
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     flex-flow: row wrap;
+    margin-top: 1.5em;
 }
 
 .menuPage .flex .columna {
@@ -486,7 +489,13 @@ section.offers p {
     flex-wrap: nowrap;
 }
 
-article.meal .cardImgCont {}
+.menuPage .flex section article.meal>* {
+    margin-bottom: 0;
+}
+
+article.meal .cardImgCont {
+    overflow: hidden;
+}
 
 article.meal .cardImgCont {}
 
@@ -589,6 +598,7 @@ main .flex article.blogCard {
 }
 
 @media(min-width:1005px) {
+    .container {}
     header .hamburguesa {
         display: none;
         float: none;
@@ -611,27 +621,42 @@ main .flex article.blogCard {
         flex-direction: row;
     }
     .menuPage .flex>.columna:first-child {
-        width: 30%;
+        padding-top: 1.5em;
+        width: 25%;
     }
     .menuPage .flex>.columna:last-child {
-        width: 70%;
+        width: 75%;
         padding-left: 3rem;
     }
     .menuPage .flex section article.meal {
         flex-direction: row;
+        padding: 1.5em 0 1.5em 1.5em;
     }
     article.meal .cardImgCont {
-        width: 30%;
-        padding: 0;
-        margin: 0;
+        width: 40%;
+        height: 100%;
     }
+    article.meal .cardImgCont img {}
     article.meal .texto {
-        width: 70%;
+        width: 60%;
         padding: 0;
+        margin-left: 2em;
+    }
+    article.meal .texto h3 {
+        min-height: 3em;
+    }
+    article.meal .texto .enlace {
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 }
 
 @media(min-width:1201px) {
+    .container {
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 0;
+    }
     .hero>div {
         padding: 7% 3%;
         max-width: 1100px;
@@ -642,5 +667,20 @@ main .flex article.blogCard {
     }
     main .flex article:last-child {
         width: 33.33%;
+    }
+    .menuPage .flex section article.meal {
+        width: 100%;
+    }
+    article.meal .cardImgCont {
+        width: 25%;
+    }
+    article.meal .cardImgCont img {}
+    article.meal .texto {
+        width: 75%;
+        padding: 0;
+        margin-left: 2em;
+    }
+    article.meal .texto h3 {
+        min-height: auto;
     }
 }
