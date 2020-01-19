@@ -45,7 +45,7 @@
             </div>
             <nav class="row container">
                 <h1 class="logo" title="Rovers"><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
-                <input class="inputOculto" type="radio" id="off" name="ocultarMenu">
+                <input class="inputOculto" type="radio" id="off" name="ocultarMenu" checked>
                 <input class="inputOculto" type="radio" id="on" name="ocultarMenu">
                 <!-- los inputs de arriba sirven para desplegar el menú desde la hamburguesa y cerrarlo desde el último elemento de la lista. Se hace sólo con CSS a través de la herencia de éstos, y gracias a los label se puede cambiar su estado para usar pseudoclases -->
                 <label for="on" class="hamburguesa">
@@ -53,15 +53,15 @@
                     <div></div>
                     <div></div>
                 </label>
-                <ul class="menu">
-                    <li><a href="#" class="activo">Inicio</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#ourservices">Services</a></li>
-                    <li><a href="#aboutus">About</a></li>
-                    <li><a href="#">item 6 </a></li>
-                    <li><label class="btnCerrar" for="off">&#215;</label></li>
-                </ul>
+               <ul class="menu">
+                        <li><a href="#" class="activo"><label for="off">Inicio</label></a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#ourservices">Services</a></li>
+                        <li><a href="#aboutus">About</a></li>
+                        <li><a href="#">Nothing yet </a></li>
+                        <li><label class="btnCerrar" for="off">&#215;</label></li>
+                    </ul>
             </nav>
             <div class="hero container-fluid">
                 <div>
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                     <div class="columna texto">
-                        <h3>The History</h3>
+                        <h3>The history</h3>
                         <h4>Our restaurant</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat totam fugiat velit aperiam!
                             Atque dicta libero in nihil totam corporis vel repellendus quo, rem quas impedit officiis

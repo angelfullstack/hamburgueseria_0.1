@@ -3,8 +3,8 @@
 /* MEJORAS:
 media query menu ok
 paddings %
-Menú responsive 
-Capitalze
+Menú responsive ok 
+Capitalze ok
 Transiciones
 Depurar CSS
 favicon
@@ -56,6 +56,12 @@ img {
 
 .wrapper {
     min-height: 100vh;
+}
+
+/*Según se ve en el mockup las cabeceras y botones tienen las letras capitalizadas. Como se supone que poner mayúsculas lo que en un texto normal va en minúsculas, y esto afecta al seo. Introduzco la capitalización por CSS, ya que es un mero efecto estético*/
+
+h2, h3, h4, h5, a {
+    text-transform: capitalize;
 }
 
 /* Inicio Header */
@@ -164,7 +170,12 @@ header nav .menu li {
 
 header nav .menu li:last-child {
     border: none;
+    font-size: 4em;
+    padding: 0em;
+    color: #aaa;
 }
+
+header nav .menu li:last-child label {}
 
 header nav .menu li a {
     display: block;
@@ -266,6 +277,10 @@ main section h2 {
     color: #21242e;
     font-size: 2em;
     text-align: center;
+}
+
+main section h2>span {
+    color: #da573a;
 }
 
 /*He bajado la especificidad de las decoraciones de los h2 ya que es un elemento reultilizable y creo que es más óptimo*/
@@ -621,8 +636,15 @@ main .flex article.blogCard {
         display: none;
         float: none;
     }
+    /*Por si se redimensiona la ventana y el menú está desplegado:*/
+    input#off:checked~.menu {
+        height: auto;
+    }
+    input#on:checked~.menu {
+        height: auto;
+    }
     header nav .menu {
-        width:auto;
+        width: auto;
         padding-top: 0;
         height: auto;
         float: right;
