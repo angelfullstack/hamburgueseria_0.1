@@ -45,12 +45,16 @@
             </div>
             <nav class="row container">
                 <h1 class="logo" title="Rovers"><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
-                <div class="hamburguesa" href="#">
-                    <!-- en unicode &#9776; -->
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+                <input class="inputOculto" type="radio" id="off" name="ocultarMenu">
+                <input class="inputOculto" type="radio" id="on" name="ocultarMenu">
+                <!-- los inputs de arriba sirven para desplegar el menú desde la hamburguesa y cerrarlo desde el último elemento de la lista. Se hace sólo con CSS a través de la herencia de éstos, y gracias a los label se puede cambiar su estado para usar pseudoclases -->
+                <label for="on">
+                    <div class="hamburguesa" href="#">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </label>
                 <ul class="menu">
                     <li><a href="#" class="activo">Inicio</a></li>
                     <li><a href="menu.html">Menu</a></li>
@@ -58,6 +62,7 @@
                     <li><a href="#ourservices">Services</a></li>
                     <li><a href="#aboutus">About</a></li>
                     <li><a href="#">item 6 </a></li>
+                    <li><label class="btnCerrar" for="off">&#215;</label></li>
                 </ul>
             </nav>
             <div class="hero container-fluid">
