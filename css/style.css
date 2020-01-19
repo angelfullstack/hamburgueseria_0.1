@@ -1,5 +1,16 @@
 /*Creo que para estuviera más optimizado se podría hacer una hoja de estilos diferente para cada página, para que entre otras cosas se cargaran sólo las fuentes necesarias(aunque esto se podría hacer en el header de cada página) y también por evitar el CSS exclusivo de cada página. No sé con seguridad qué sería lo correcto*/
 
+/* MEJORAS:
+media query menu
+paddings
+Menú responsive
+Capitalze
+Transiciones
+Depurar CSS
+favicon
+meta description    
+ */
+
 @import url('reset.css');
 @import url('https://fonts.googleapis.com/css?family=Handlee|Great+Vibes|Montserrat:400,700&display=swap');
 /* * {
@@ -283,7 +294,7 @@ main .flex article>* {
     margin-bottom: 1em;
 }
 
-main section article div i {
+main section article div>i {
     color: #da573a;
     font-size: 2em;
     border: 3px dotted #da573a;
@@ -467,13 +478,17 @@ section.offers p {
     width: 100%;
 }
 
-.menuPage .flex article {
+.menuPage .flex section article.meal {
     border: none;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
-article.meal {
-    margin-bottom: 0;
-}
+article.meal .cardImgCont {}
+
+article.meal .cardImgCont {}
 
 article.meal h3 {
     font-size: 1.25rem;
@@ -520,7 +535,6 @@ main .flex article.blogCard {
 
 .cardImgCont {
     position: relative;
-    background: green;
 }
 
 .cardImgCont img {}
@@ -593,18 +607,27 @@ main .flex article.blogCard {
         width: 50%;
         padding: 2em;
     }
-    .menuPage .flex {}
+    .menuPage .flex {
+        flex-direction: row;
+    }
     .menuPage .flex>.columna:first-child {
         width: 30%;
     }
     .menuPage .flex>.columna:last-child {
         width: 70%;
+        padding-left: 3rem;
     }
-    .menuPage .flex article {
-        width: 100%;
+    .menuPage .flex section article.meal {
+        flex-direction: row;
     }
-    .menupage .flex .meal .cardImgCont {
-        float: left;
+    article.meal .cardImgCont {
+        width: 30%;
+        padding: 0;
+        margin: 0;
+    }
+    article.meal .texto {
+        width: 70%;
+        padding: 0;
     }
 }
 
