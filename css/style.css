@@ -122,6 +122,7 @@ header h1.logo {
 }
 
 header .hamburguesa {
+    display: block;
     cursor: pointer;
     width: 2em;
     float: right;
@@ -134,8 +135,25 @@ header .hamburguesa div {
 }
 
 header nav .menu {
-    padding-top: 3.75em;
-    height: 0px;
+    width: 70%;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    transition: height .5s;
+}
+
+/*Toggle menu responsive*/
+
+input.inputOculto {
+    display: none;
+}
+
+input#on:checked~.menu {
+    height: 28em;
+}
+
+input#off:checked~.menu {
+    height: 0em;
 }
 
 header nav .menu li {
@@ -461,7 +479,6 @@ section.offers hr {
     position: relative;
     left: 0;
     margin: 1rem 0 1rem 0;
-    bor
 }
 
 section.offers p {
@@ -605,7 +622,9 @@ main .flex article.blogCard {
         float: none;
     }
     header nav .menu {
+        width:auto;
         padding-top: 0;
+        height: auto;
         float: right;
     }
     header nav .menu li {
@@ -613,6 +632,9 @@ main .flex article.blogCard {
         padding: .5em 0em 0 1.25em;
         text-align: right;
         border-bottom: none;
+    }
+    header nav .menu li:last-child {
+        display: none;
     }
     main section .flex .columna {
         width: 50%;
