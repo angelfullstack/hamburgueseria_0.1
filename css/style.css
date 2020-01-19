@@ -2,13 +2,13 @@
 
 /* MEJORAS:
 media query menu ok
-paddings %
+paddings ok
 Menú responsive ok 
 Capitalze ok
-Transiciones
+Transiciones ok
 Depurar CSS
-favicon
-meta description    
+favicon ok
+meta description ok 
  */
 
 @import url('reset.css');
@@ -175,12 +175,11 @@ header nav .menu li:last-child {
     color: #aaa;
 }
 
-header nav .menu li:last-child label {}
-
 header nav .menu li a {
     display: block;
     color: #aaa;
     text-decoration: none;
+    transition: color .25s;
 }
 
 header nav .menu li a.activo, header nav .menu li a:hover {
@@ -232,7 +231,6 @@ header nav .menu li a.activo, header nav .menu li a:hover {
 }
 
 .btn:hover {
-    color: #da573a;
     border: 1px solid #da573a;
     background-color: #fafafa00;
 }
@@ -243,7 +241,7 @@ header nav .menu li a.activo, header nav .menu li a:hover {
 }
 
 .btn:hover i {
-    transform: translateX(2em) scale(3);
+    transform: translateX(.5em) scale(1.5);
 }
 
 .social li {
@@ -255,6 +253,7 @@ header nav .menu li a.activo, header nav .menu li a:hover {
 .social a {
     text-decoration: none;
     color: #fafafa;
+    transition: color .25s;
 }
 
 .social a:hover {
@@ -450,10 +449,6 @@ main.menuPage {
     color: #fafafa;
 }
 
-main.menuPage .menuMenu {}
-
-main.menuPage .menuMenu ul {}
-
 main.menuPage .menuMenu li {
     margin-bottom: 1em;
 }
@@ -478,14 +473,10 @@ main.menuPage .menuMenu a:hover, main.menu .menuMenu a:visited:hover {
 
 /*Offers*/
 
-section.offers {}
-
 section.offers h3 {
     font-size: 1.25rem;
     font-weight: bold;
 }
-
-section.offers .underline {}
 
 section.offers hr {
     margin-left: 0;
@@ -530,8 +521,6 @@ article.meal .cardImgCont {
     overflow: hidden;
 }
 
-article.meal .cardImgCont {}
-
 article.meal h3 {
     font-size: 1.25rem;
     color: #fafafa;
@@ -546,6 +535,14 @@ article.meal h3 span.price {
 .flex article.meal:last-child {
     margin-bottom: 0;
     border-bottom: none;
+}
+
+/*Botón subir*/
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 a.subir {
@@ -579,8 +576,6 @@ main .flex article.blogCard {
     position: relative;
 }
 
-.cardImgCont img {}
-
 .cardImgCont .date {
     position: absolute;
     top: 0;
@@ -590,8 +585,6 @@ main .flex article.blogCard {
     padding: .75em 1em;
     font-weight: bold;
 }
-
-.blogCard h3 {}
 
 .blogCard h4 {
     color: #da573a;
@@ -631,7 +624,6 @@ main .flex article.blogCard {
 }
 
 @media(min-width:1005px) {
-    .container {}
     header .hamburguesa {
         display: none;
         float: none;
@@ -681,7 +673,6 @@ main .flex article.blogCard {
         width: 40%;
         height: 100%;
     }
-    article.meal .cardImgCont img {}
     article.meal .texto {
         width: 60%;
         padding: 0;
@@ -719,7 +710,6 @@ main .flex article.blogCard {
     article.meal .cardImgCont {
         width: 25%;
     }
-    article.meal .cardImgCont img {}
     article.meal .texto {
         width: 75%;
         padding: 0;
